@@ -6,10 +6,10 @@ abstract class Account {
   protected successor: Account | undefined;
   protected balance: number;
   protected name: string;
-  public setNext = (acount: Account) => {
+  public setNext(acount: Account) {
     this.successor = acount;
-  };
-  public pay = (amountToPay: number) => {
+  }
+  public pay(amountToPay: number) {
     if (this.canPay(amountToPay)) {
       console.log(`${this.name}で${amountToPay}ドル支払われました。`);
     } else if (this.successor) {
@@ -18,10 +18,10 @@ abstract class Account {
     } else {
       throw new Error("残高が十分なアカウントはありません。");
     }
-  };
-  public canPay = (amount: number) => {
+  }
+  public canPay(amount: number) {
     return this.balance >= amount;
-  };
+  }
 }
 
 export class Bank extends Account {

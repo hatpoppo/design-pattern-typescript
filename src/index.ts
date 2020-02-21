@@ -18,3 +18,11 @@ let turnOff = new TurnOff(bulb);
 let remote = new RemoteControl();
 remote.submit(turnOn);
 remote.submit(turnOff);
+
+import { StationList, RadioStation } from "./Behavioral/Iterator";
+let stationList = new StationList([]);
+stationList.addStation(new RadioStation(100));
+stationList.addStation(new RadioStation(200));
+for (let station of stationList) {
+  console.log(station);
+}
