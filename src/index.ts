@@ -26,3 +26,10 @@ stationList.addStation(new RadioStation(200));
 for (let station of stationList) {
   console.log(station);
 }
+
+import { ChatRoom, User } from "./Behavioral/Mediator";
+let mediator = new ChatRoom();
+let john = new User("John", mediator);
+let jane = new User("Jane", mediator);
+john.send("こんにちは！");
+jane.send("良い天気ね。");
