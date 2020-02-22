@@ -74,3 +74,11 @@ let jump = new Jump();
 monkey.accept(jump);
 lion.accept(jump);
 dolphin.accept(jump);
+
+import { Sorter, BubbleSortStrategy, QuickSortStartegy } from "./Behavioral/Strategy";
+let dataset = [1, 4, 6, 8, 3];
+let sorter = new Sorter(new BubbleSortStrategy());
+sorter.sort(dataset);
+
+sorter = new Sorter(new QuickSortStartegy());
+sorter.sort(dataset);
