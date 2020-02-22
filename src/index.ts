@@ -33,3 +33,29 @@ let john = new User("John", mediator);
 let jane = new User("Jane", mediator);
 john.send("こんにちは！");
 jane.send("良い天気ね。");
+
+import { Editor } from "./Behavioral/Memento";
+let editor = new Editor();
+
+editor.type("最初の文です。");
+editor.type("次の文です。");
+
+let saved = editor.save();
+
+editor.type("３番目の文です。");
+
+console.log(editor.content);
+
+editor.restore(saved);
+console.log(editor.content);
+
+import { JobSeeker, JobPostings, JobPost } from "./Behavioral/Observer";
+
+let johnDoe = new JobSeeker("John Doe");
+let JaneDoe = new JobSeeker("Jane Doe");
+
+let jobPostins = new JobPostings();
+jobPostins.attach(johnDoe);
+jobPostins.attach(JaneDoe);
+
+jobPostins.addJob(new JobPost("ソフトウェアエンジニア"));
