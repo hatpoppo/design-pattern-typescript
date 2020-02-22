@@ -46,3 +46,15 @@ export class Speak implements AnimalOperation {
     dolphin.speak();
   }
 }
+
+export class Jump implements AnimalOperation {
+  visitMonkey(monkey: Monkey) {
+    console.log("２０フィートジャンプして木に登った");
+  }
+  visitLion(lion: Lion) {
+    console.log("７フィートジャンプして着地した");
+  }
+  visitDolphin(dolphin: Dolphin) {
+    console.log("水上を少し進んでから姿を消した");
+  }
+}
