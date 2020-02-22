@@ -82,3 +82,11 @@ sorter.sort(dataset);
 
 sorter = new Sorter(new QuickSortStartegy());
 sorter.sort(dataset);
+
+import { TextEditor, Default, UpperCase, LowerCase } from "./Behavioral/State";
+let state_editor = new TextEditor(new Default());
+state_editor.type("First line.");
+state_editor.state = new UpperCase();
+state_editor.type("Second line.");
+state_editor.state = new LowerCase();
+state_editor.type("Third line.");
