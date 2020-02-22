@@ -59,3 +59,13 @@ jobPostins.attach(johnDoe);
 jobPostins.attach(JaneDoe);
 
 jobPostins.addJob(new JobPost("ソフトウェアエンジニア"));
+
+import { Monkey, Lion, Dolphin, Speak } from "./Behavioral/Visitor";
+let monkey = new Monkey();
+let lion = new Lion();
+let dolphin = new Dolphin();
+
+let speak = new Speak();
+monkey.accept(speak);
+lion.accept(speak);
+dolphin.accept(speak);
