@@ -102,3 +102,10 @@ import { DoorFactory } from "./Creational/SimpleFactory";
 let door = DoorFactory.makeDoor(100, 200);
 console.log("Width:", door.getWidth());
 console.log("Height:", door.getHeight());
+
+import { DevelopmentManager, MarketingManager } from "./Creational/FactoryMethod";
+let devManager = new DevelopmentManager();
+devManager.takeInterview();
+
+let marketingManager = new MarketingManager();
+marketingManager.takeInterview();
