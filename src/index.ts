@@ -97,3 +97,8 @@ androidBuilder.build();
 
 let iosBuilder = new IOSBuilder();
 iosBuilder.build();
+
+import { DoorFactory } from "./Creational/SimpleFactory";
+let door = DoorFactory.makeDoor(100, 200);
+console.log("Width:", door.getWidth());
+console.log("Height:", door.getHeight());
