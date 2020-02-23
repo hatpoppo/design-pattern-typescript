@@ -90,3 +90,10 @@ state_editor.state = new UpperCase();
 state_editor.type("Second line.");
 state_editor.state = new LowerCase();
 state_editor.type("Third line.");
+
+import { AndroidBuilder, IOSBuilder } from "./Behavioral/TemplateMethod";
+let androidBuilder = new AndroidBuilder();
+androidBuilder.build();
+
+let iosBuilder = new IOSBuilder();
+iosBuilder.build();
