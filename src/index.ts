@@ -140,3 +140,10 @@ console.log(cloned.name);
 cloned.name = "ドリー";
 console.log(cloned.name);
 console.log(original.name);
+
+import { President } from "./Creational/Singleton";
+const president1 = President.getInstance();
+const president2 = President.getInstance();
+if (president1 === president2) {
+  console.log("インスタンスが一致");
+}
