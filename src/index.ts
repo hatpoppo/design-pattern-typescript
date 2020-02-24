@@ -109,3 +109,23 @@ devManager.takeInterview();
 
 let marketingManager = new MarketingManager();
 marketingManager.takeInterview();
+
+import { WoodenDoorFactory, IronDoorFactory } from "./Creational/AbstractFactory";
+let woodenFactory = new WoodenDoorFactory();
+let doordoor = woodenFactory.makeDoor();
+let expert = woodenFactory.makeFittingExpert();
+doordoor.getDescription();
+expert.getDescription();
+
+let ironFactory = new IronDoorFactory();
+doordoor = ironFactory.makeDoor();
+expert = ironFactory.makeFittingExpert();
+doordoor.getDescription();
+expert.getDescription();
+
+import { BurgerBuilder } from "./Creational/Builder";
+let burger = new BurgerBuilder(14)
+  .addChese()
+  .addLettuce()
+  .addPepperoni();
+console.log(burger);
