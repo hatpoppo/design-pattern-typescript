@@ -129,3 +129,14 @@ let burger = new BurgerBuilder(14)
   .addLettuce()
   .addPepperoni();
 console.log(burger);
+
+import { Sheep } from "./Creational/Prototype";
+let original = new Sheep("ジョリー");
+console.log(original.name);
+console.log(original.category);
+
+let cloned = original.clone();
+console.log(cloned.name);
+cloned.name = "ドリー";
+console.log(cloned.name);
+console.log(original.name);
