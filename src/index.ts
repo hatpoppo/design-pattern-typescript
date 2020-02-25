@@ -147,3 +147,9 @@ const president2 = President.getInstance();
 if (president1 === president2) {
   console.log("インスタンスが一致");
 }
+
+import { WildDog, WildDogAdapter, Hunter } from "./Structual/Adapter";
+let wildDog = new WildDog();
+let wildDogAdapter = new WildDogAdapter(wildDog);
+let hunter = new Hunter();
+hunter.hunt(wildDogAdapter);
