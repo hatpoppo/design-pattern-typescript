@@ -181,3 +181,8 @@ console.log(someCoffee.cost, someCoffee.description);
 
 someCoffee = new VanillaCoffee(someCoffee);
 console.log(someCoffee.cost, someCoffee.description);
+
+import { Computer, ComputerFacade } from "./Structual/Facade";
+let computer = new ComputerFacade(new Computer());
+computer.turnOn();
+computer.trunOff();
