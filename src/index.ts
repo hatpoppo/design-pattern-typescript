@@ -160,3 +160,11 @@ let about = new About(darkTheme);
 let careers = new Careers(darkTheme);
 console.log(about.getContent());
 console.log(careers.getContent());
+
+import { Developer, Designer, Organization } from "./Structual/Composite";
+let mike = new Developer("Mike Doe", 12000);
+let carol = new Designer("Carol Doe", 15000);
+let organization = new Organization();
+organization.employee = mike;
+organization.employee = carol;
+console.log("賞味の給与：", organization.getNetSalaryes());
