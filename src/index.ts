@@ -153,3 +153,10 @@ let wildDog = new WildDog();
 let wildDogAdapter = new WildDogAdapter(wildDog);
 let hunter = new Hunter();
 hunter.hunt(wildDogAdapter);
+
+import { DarkTheme, About, Careers } from "./Structual/Bridge";
+let darkTheme = new DarkTheme();
+let about = new About(darkTheme);
+let careers = new Careers(darkTheme);
+console.log(about.getContent());
+console.log(careers.getContent());
