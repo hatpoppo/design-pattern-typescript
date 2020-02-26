@@ -168,3 +168,16 @@ let organization = new Organization();
 organization.employee = mike;
 organization.employee = carol;
 console.log("賞味の給与：", organization.getNetSalaryes());
+
+import { SimpleCoffee, MilkCoffee, WhipCoffee, VanillaCoffee } from "./Structual/Decorator";
+let someCoffee = new SimpleCoffee();
+console.log(someCoffee.cost, someCoffee.description);
+
+someCoffee = new MilkCoffee(someCoffee);
+console.log(someCoffee.cost, someCoffee.description);
+
+someCoffee = new WhipCoffee(someCoffee);
+console.log(someCoffee.cost, someCoffee.description);
+
+someCoffee = new VanillaCoffee(someCoffee);
+console.log(someCoffee.cost, someCoffee.description);
