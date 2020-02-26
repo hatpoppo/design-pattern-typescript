@@ -186,3 +186,13 @@ import { Computer, ComputerFacade } from "./Structual/Facade";
 let computer = new ComputerFacade(new Computer());
 computer.turnOn();
 computer.trunOff();
+
+import { TeaMaker, TeaShop } from "./Structual/Flyweight";
+let teaMaker = new TeaMaker();
+let shop = new TeaShop(teaMaker);
+shop.takeOrder("砂糖少なめ", 1);
+shop.takeOrder("ミルク多め", 2);
+shop.takeOrder("砂糖なし", 5);
+shop.takeOrder("砂糖なし", 3);
+
+shop.server();
