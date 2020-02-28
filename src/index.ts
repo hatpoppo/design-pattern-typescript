@@ -196,3 +196,9 @@ shop.takeOrder("砂糖なし", 5);
 shop.takeOrder("砂糖なし", 3);
 
 shop.server();
+
+import { Security, LabDoor } from "./Structual/Proxy";
+let sec_door = new Security(new LabDoor());
+sec_door.open("invalid");
+sec_door.open("$ecr@t");
+sec_door.close();
